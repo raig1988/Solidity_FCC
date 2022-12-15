@@ -1,7 +1,5 @@
 const { assert, expect } = require("chai");
-const { isBytes } = require("ethers/lib/utils");
 const { getNamedAccounts, deployments, ethers, network } = require("hardhat");
-const { HARDHAT_NETWORK_RESET_EVENT } = require("hardhat/internal/constants");
 const {developmentChains, networkConfig} = require("../../helper-hardhat-config");
 
 !developmentChains.includes(network.name) 

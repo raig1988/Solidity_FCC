@@ -105,4 +105,13 @@ contract FundMe {
     function getPriceFeed() public view returns (AggregatorV3Interface) {
         return s_priceFeed;
     }
+
+    // Added to solve issue of <FundMe#<unrecognized selector>
+    receive() external payable {} // to support receiving ETH by default
+    fallback() external payable {}
+    function supportsInterface(bytes4 interfaceID) internal {}
+    function decimals() internal {}
+    function symbol() internal {}
+    function name() internal {}
+
 }
